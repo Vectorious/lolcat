@@ -174,7 +174,7 @@ def run():
         args = ['-']
 
     for filename in args:
-        fd = sys.stdin if filename == '-' else file(filename)
+        fd = sys.stdin if filename == '-' else open(filename)
         lolcat.cat(fd, options)
 
 if __name__ == '__main__':
